@@ -1,0 +1,823 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <meta name="theme-color" content="#00cebf">
+
+   <title>KyberSwap
+   </title>
+
+   <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+   <!-- /*шрифты*/ -->
+   <style data-shopify>
+      :root {
+         --typeHeaderPrimary: Poppins;
+         --typeHeaderFallback: sans-serif;
+         --typeHeaderSize: 30px;
+         --typeHeaderWeight: 800;
+         --typeHeaderLineHeight: 1.2;
+         --typeHeaderSpacing: 0.0em;
+         --typeBasePrimary: -apple-system;
+         --typeBaseFallback: BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+         --typeBaseSize: 16px;
+         --typeBaseWeight: 400;
+         --typeBaseLineHeight: 1.6;
+         --typeBaseSpacing: 0.0em;
+         --iconWeight: 3px;
+         --iconLinecaps: miter;
+      }
+
+      .collection-hero__content:before,
+      .hero__image-wrapper:before,
+      .hero__media:before {
+         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 40%, rgba(0, 0, 0, 0.62) 100%);
+      }
+
+      .skrim__item-content .skrim__overlay:after {
+         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.62) 100%);
+      }
+
+      .placeholder-content {
+         background-image: linear-gradient(100deg, #ffffff 40%, #f7f7f7 63%, #ffffff 79%);
+      }
+   </style>
+   <!-- /*скрипты*/ -->
+   <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+      window.theme = window.theme || {};
+      theme.routes = {
+         home: "/",
+         cart: "/cart.js",
+         cartPage: "/cart",
+         cartAdd: "/cart/add.js",
+         cartChange: "/cart/change.js",
+         search: "/search"
+      };
+      theme.strings = {
+         soldOut: "Sold Out",
+         unavailable: "Unavailable",
+         inStockLabel: "In stock, ready to ship",
+         stockLabel: "Low stock - [count] items left",
+         willNotShipUntil: "Ready to ship [date]",
+         willBeInStockAfter: "Back in stock [date]",
+         waitingForStock: "Inventory on the way",
+         cartSavings: "You're saving [savings]",
+         cartEmpty: "Your cart is currently empty.",
+         cartTermsConfirmation: "You must agree with the terms and conditions of sales to check out",
+         searchCollections: "Collections:",
+         searchPages: "Pages:",
+         searchArticles: "Articles:"
+      };
+      theme.settings = {
+         dynamicVariantsEnable: true,
+         cartType: "drawer",
+         isCustomerTemplate: false,
+         moneyFormat: "${{amount}}",
+         predictiveSearch: true,
+         predictiveSearchType: "product,article,page,collection",
+         quickView: true,
+         themeName: 'Motion',
+         themeVersion: "8.3.0"
+      };
+   </script>
+
+   <!-- что то нужное для отображения -->
+   <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+   <script src="scripts/vendor-scripts-v13.js" defer="defer"></script>
+   <script src="scripts/theme.js"
+      defer="defer"></script>
+   <script src="scripts/main.min.js" defer></script>
+   <!--Gem_Page_Header_Script-->
+
+</head>
+
+<body class="template-index" data-transitions="true" data-type_header_capitalize="false"
+   data-type_base_accent_transform="true" data-type_header_accent_transform="false" data-animate_sections="true"
+   data-animate_underlines="true" data-animate_buttons="true" data-animate_images="true"
+   data-animate_page_transition_style="page-slow-fade" data-type_header_text_alignment="true"
+   data-animate_images_style="zoom-fade">
+
+   <script type="text/javascript">window.setTimeout(function () { document.body.className += " loaded"; }, 25);</script>
+   <div id="PageContainer" class="page-container">
+      <div class="transition-body">
+         <div id="shopify-section-header" class="shopify-section">
+            <div id="NavDrawer" class="drawer drawer--right">
+               <div class="drawer__contents">
+                  <div class="drawer__fixed-header">
+                     <div class="drawer__header appear-animation appear-delay-2">
+                        <div class="drawer__title"></div>
+                        <div class="drawer__close">
+                           <button type="button" class="drawer__close-button js-drawer-close">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close"
+                                 viewBox="0 0 64 64">
+                                 <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" />
+                              </svg>
+                              <span class="icon__fallback-text">Close menu</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="drawer__scrollable">
+                     <ul class="mobile-nav" role="navigation" aria-label="Primary">
+                        <li class="mobile-nav__item appear-animation appear-delay-3"><a href="#"
+                              class="mobile-nav__link">Home</a></li>
+                        <li class="mobile-nav__item appear-animation appear-delay-4"><a href="#"
+                              class="mobile-nav__link">Shop</a></li>
+                        <li class="mobile-nav__item appear-animation appear-delay-5"><a href="#"
+                              class="mobile-nav__link">FAQs</a></li>
+                        <li class="mobile-nav__item appear-animation appear-delay-6"><a href="#"
+                              class="mobile-nav__link">Contact Us</a></li>
+                        <li class="mobile-nav__spacer"></li>
+                     </ul>
+                     <ul class="mobile-nav__social">
+                        <li class="appear-animation appear-delay-7">
+                           <a target="_blank" rel="noopener" href="#"
+                              title="TheHandMassager on Facebook">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook"
+                                 viewBox="0 0 14222 14222">
+                                 <path
+                                    d="M14222 7112c0 3549.352-2600.418 6491.344-6000 7024.72V9168h1657l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4968.72C2600.418 13603.344 0 10661.352 0 7112 0 3184.703 3183.703 1 7111 1s7111 3183.703 7111 7111zm-8222 7025c362 57 733 86 1111 86-377.945 0-749.003-29.485-1111-86.28zm2222 0v-.28a7107.458 7107.458 0 0 1-167.717 24.267A7407.158 7407.158 0 0 0 8222 14137zm-167.717 23.987C7745.664 14201.89 7430.797 14223 7111 14223c319.843 0 634.675-21.479 943.283-62.013z" />
+                              </svg>
+                              <span class="icon__fallback-text">Facebook</span>
+                           </a>
+                        </li>
+                        <li class="appear-animation appear-delay-8">
+                           <a target="_blank" rel="noopener" href="#"
+                              title="TheHandMassager on Instagram">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram"
+                                 viewBox="0 0 32 32">
+                                 <path fill="#444"
+                                    d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z" />
+                                 <path fill="#444"
+                                    d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z" />
+                              </svg>
+                              <span class="icon__fallback-text">Instagram</span>
+                           </a>
+                        </li>
+                        <li class="appear-animation appear-delay-9">
+                           <a target="_blank" rel="noopener" href="#"
+                              title="TheHandMassager on TikTok">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-tiktok"
+                                 viewBox="0 0 2859 3333">
+                                 <path
+                                    d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z" />
+                              </svg>
+                              <span class="icon__fallback-text">TikTok</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div id="CartDrawer" class="drawer drawer--right">
+               <form id="CartDrawerForm" action="/cart" method="post" novalidate class="drawer__contents">
+                  <div class="drawer__fixed-header">
+                     <div class="drawer__header appear-animation appear-delay-1">
+                        <div class="drawer__title">Cart</div>
+                        <div class="drawer__close">
+                           <button type="button" class="drawer__close-button js-drawer-close">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close"
+                                 viewBox="0 0 64 64">
+                                 <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" />
+                              </svg>
+                              <span class="icon__fallback-text">Close cart</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="drawer__inner">
+                     <div class="drawer__scrollable">
+                        <div data-products class="appear-animation appear-delay-2"></div>
+                     </div>
+                     <div class="drawer__footer appear-animation appear-delay-4">
+                        <div data-discounts>
+                        </div>
+                        <div class="cart__item-sub cart__item-row">
+                           <div class="cart__subtotal">Subtotal</div>
+                           <div data-subtotal>$0.00</div>
+                        </div>
+                        <div class="cart__item-row cart__savings text-center hide" data-savings></div>
+                        <div class="cart__item-row text-center ajaxcart__note">
+                           <small>
+                              Congrats! Your order qualifies for free shipping.<br />
+                           </small>
+                        </div>
+                        <div class="cart__checkout-wrapper">
+                           <button type="submit" name="checkout" data-terms-required="false" class="btn cart__checkout">
+                              Check out
+                           </button>
+                           <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                              <div class="dynamic-checkout__content" id="dynamic-checkout-cart"
+                                 data-shopify="dynamic-checkout-cart"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="drawer__cart-empty appear-animation appear-delay-2">
+                     <div class="drawer__scrollable">
+                        Your cart is currently empty.
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <style data-shopify>
+               .site-nav__link,
+               .site-nav__dropdown-link {
+                  font-size: 18px;
+               }
+
+               .site-header {
+                  border-bottom: 1px solid;
+                  border-bottom-color: #f1f1f1;
+               }
+            </style>
+            <div data-section-id="header" data-section-type="header">
+               <div id="HeaderWrapper" class="header-wrapper header-wrapper--overlay is-light">
+                  <div class="announcement"><span class="announcement__text announcement__text--open"
+                        data-text="50-off-sale-free-shipping-sale-ends-today">
+                        50% Off Sale + Free Shipping | Sale Ends Today
+                     </span>
+                  </div>
+                  <header id="SiteHeader" class="site-header" data-sticky="true" data-overlay="true">
+                     <div class="page-width">
+                        <div class="header-layout header-layout--left-center" data-logo-align="left">
+                           <div class="header-item header-item--logo">
+                              <style data-shopify>
+                                 .header-item--logo,
+                                 .header-layout--left-center .header-item--logo,
+                                 .header-layout--left-center .header-item--icons {
+                                    -webkit-box-flex: 0 1 140px;
+                                    -ms-flex: 0 1 140px;
+                                    flex: 0 1 140px;
+                                 }
+
+                                 @media only screen and (min-width: 769px) {
+
+                                    .header-item--logo,
+                                    .header-layout--left-center .header-item--logo,
+                                    .header-layout--left-center .header-item--icons {
+                                       -webkit-box-flex: 0 0 200px;
+                                       -ms-flex: 0 0 200px;
+                                       flex: 0 0 200px;
+                                    }
+                                 }
+
+                                 .site-header__logo a {
+                                    max-width: 140px;
+                                 }
+
+                                 .is-light .site-header__logo .logo--inverted {
+                                    max-width: 140px;
+                                 }
+
+                                 @media only screen and (min-width: 769px) {
+                                    .site-header__logo a {
+                                       max-width: 200px;
+                                    }
+
+                                    .is-light .site-header__logo .logo--inverted {
+                                       max-width: 200px;
+                                    }
+                                 }
+                              </style>
+                              <h1 id="LogoContainer" class="site-header__logo" itemscope
+                                 itemtype="">
+                                 <span class="visually-hidden">TheHandMassager</span>
+                                 <a href="#" itemprop="url" class="site-header__logo-link logo--has-inverted">
+                                    <img class="small--hide" src="img/logo-dark-1.svg" srcset="img/logo-dark-1.svg"
+                                       alt="TheHandMassager" itemprop="logo">
+                                    <img class="medium-up--hide" src="img/logo-dark-1.svg" srcset="img/logo-dark-1.svg"
+                                       alt="TheHandMassager">
+                                 </a><a href="#" itemprop="url" class="site-header__logo-link logo--inverted">
+                                    <img class="small--hide" src="img/logo.svg" srcset="img/logo.svg"
+                                       alt="TheHandMassager" itemprop="logo">
+                                    <img class="medium-up--hide" src="img/logo.svg" srcset="img/logo.svg"
+                                       alt="TheHandMassager">
+                                 </a>
+                              </h1>
+                           </div>
+                           <div class="header-item header-item--navigation text-center">
+                              <ul class="site-nav site-navigation medium-down--hide" role="navigation"
+                                 aria-label="Primary">
+                                 <li class="site-nav__item site-nav__expanded-item">
+                                    <a href="#" class="site-nav__link">
+                                       Home
+                                    </a>
+                                 </li>
+                                 <li class="site-nav__item site-nav__expanded-item">
+                                    <a href="#" class="site-nav__link">
+                                       FAQs
+                                    </a>
+                                 </li>
+                                 <li class="site-nav__item site-nav__expanded-item">
+                                    <a href="#" class="site-nav__link">
+                                       Contact Us
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="header-item header-item--icons">
+                              <div class="site-nav site-nav--icons">
+                                 <div class="site-nav__icons">
+                                    <button type="button"
+                                       class="site-nav__link site-nav__link--icon js-drawer-open-nav large-up--hide"
+                                       aria-controls="NavDrawer">
+                                       <svg aria-hidden="true" focusable="false" role="presentation"
+                                          class="icon icon-hamburger" viewBox="0 0 64 64">
+                                          <path d="M7 15h51M7 32h43M7 49h51" />
+                                       </svg>
+                                       <span class="icon__fallback-text">Site navigation</span>
+                                    </button>
+                                    <a href="#"
+                                       class="site-nav__link site-nav__link--icon js-drawer-open-cart js-no-transition"
+                                       aria-controls="CartDrawer" data-icon="bag">
+                                       <span class="cart-link">
+                                          <svg aria-hidden="true" focusable="false" role="presentation"
+                                             class="icon icon-bag" viewBox="0 0 64 64">
+                                             <g fill="none" stroke="#000" stroke-width="2">
+                                                <path d="M25 26c0-15.79 3.57-20 8-20s8 4.21 8 20" />
+                                                <path d="M14.74 18h36.51l3.59 36.73h-43.7z" />
+                                             </g>
+                                          </svg>
+                                          <span class="icon__fallback-text">Cart</span>
+                                          <span class="cart-link__bubble"></span>
+                                       </span>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="site-header__search-container">
+                        <div class="site-header__search">
+                           <div class="page-width">
+                              <form action="/search" method="get" id="HeaderSearchForm" class="site-header__search-form"
+                                 role="search">
+                                 <input type="hidden" name="type" value="product,article,page,collection">
+                                 <input type="hidden" name="options[prefix]" value="last">
+                                 <button type="submit" class="text-link site-header__search-btn">
+                                    <svg aria-hidden="true" focusable="false" role="presentation"
+                                       class="icon icon-search" viewBox="0 0 64 64">
+                                       <path
+                                          d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42" />
+                                    </svg>
+                                    <span class="icon__fallback-text">Search</span>
+                                 </button>
+                                 <input type="search" name="q" value="" placeholder="Search our store"
+                                    class="site-header__search-input" aria-label="Search our store">
+                              </form>
+                              <button type="button" id="SearchClose" class="text-link site-header__search-btn">
+                                 <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close"
+                                    viewBox="0 0 64 64">
+                                    <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" />
+                                 </svg>
+                                 <span class="icon__fallback-text">"Close (esc)"</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div id="PredictiveWrapper" class="predictive-results hide">
+                           <div class="page-width">
+                              <div id="PredictiveResults" class="predictive-result__layout"></div>
+                              <div class="text-center predictive-results__footer">
+                                 <button type="button" class="btn" data-predictive-search-button>
+                                    <small>
+                                       View more
+                                    </small>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </header>
+               </div>
+            </div>
+            <style data-shopify>
+               /* Offset first hero's text to make room for overlaid navigation */
+               .shopify-section:first-child .hero__text-content.vertical-center {
+                  padding-top: 110px;
+               }
+
+               @media screen and (max-width: 768px) {
+                  .shopify-section:first-child .hero__text-content.vertical-center {
+                     padding-top: 70px;
+                  }
+               }
+            </style>
+         </div>
+      <main   class="main-content" id="MainContent">
+         <div id="shopify-section-template--15627247714557__1643319364eaf68318"
+            class="shopify-section index-section--hero">
+            <div data-section-id="template--15627247714557__1643319364eaf68318"
+               data-section-type="slideshow-section">
+               <div class="slideshow-wrapper">
+                  <style data-shopify>
+                     @media screen and (max-width: 768px) {
+                        .hero-natural-mobile--template--15627247714557__1643319364eaf68318 {
+                           height: 0;
+                           padding-bottom: 100.0%;
+                        }
+                     }
+                  </style>
+                  <div class=" hero-natural-mobile--template--15627247714557__1643319364eaf68318">
+                     <div id="Slideshow-template--15627247714557__1643319364eaf68318"
+                        class="hero hero--650px hero--template--15627247714557__1643319364eaf68318 hero--mobile--auto loading loading--delayed"
+                        data-mobile-natural="true" data-autoplay="true" data-speed="5000" data-aos="hero__animation"
+                        data-arrows="true" data-slide-count="1">
+                        <div class="slideshow__slide slideshow__slide--1643319364794f903b-0" data-index="0"
+                           data-id="1643319364794f903b-0">
+                           <style data-shopify>
+                              .slideshow__slide--1643319364794f903b-0 .hero__title {
+                                 font-size: 40.0px;
+                              }
+
+                              @media only screen and (min-width: 769px) {
+                                 .slideshow__slide--1643319364794f903b-0 .hero__title {
+                                    font-size: 80px;
+                                 }
+                              }
+                           </style>
+                           <div class="hero__image-wrapper">
+                              <style data-shopify>
+                                 .hero__image--1643319364794f903b-0 {
+                                    object-position: center center;
+                                    font-family: "object-fit: cover; object-position: center center;";
+                                 }
+                              </style>
+                              <img class="hero__image hero__image--1643319364794f903b-0 lazyload small--hide"
+                                 src="img/111.jpg" data-src="img/111.jpg"
+                                 data-aspectratio="1.9636363636363636" data-sizes="auto" alt="">
+
+                              <img class="hero__image hero__image--1643319364794f903b-0 lazyload medium-up--hide"
+                                 src="img/TheHandMassager-Product-Image_300x.jpg"
+                                 data-src="img/111.jpg" data-aspectratio="1.0" data-sizes="auto"
+                                 alt="">
+                              <noscript>
+                                 <img class="hero__image hero__image--1643319364794f903b-0"
+                                    src="img/111.jpg" alt="">
+                              </noscript>
+                           </div>
+                           <div class="hero__text-wrap">
+                              <div class="page-width">
+                                 <div class="hero__text-content vertical-bottom horizontal-left">
+                                    <h2 class="h1 hero__title">
+                                       <div class="animation-cropper">
+                                          <div class="animation-contents">
+                                             <span style="color:#31CB9E">Swap</span> and <span style="color:#31CB9E">Earn</span> Tokens at the Best Rates 
+                                          </div>
+                                       </div>
+                                    </h2>
+                                    <div class="hero__subtitle">
+                                       <div class="animation-cropper">
+                                          <div class="animation-contents">
+                                             KyberSwap is DeFi’s premier automated market maker, providing the best token prices for traders across multiple exchanges, and maximizing earnings for liquidity providers, in one decentralized platform.
+
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="hero__link">
+                                       <div class="animation-cropper">
+                                          <div class="animation-contents">
+                                             <a href="#" class="btn btn--inverse">
+                                                Swap now
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div  id="shopify-section-template--15627247714557__rich-text" class="shopify-section index-section">
+            <div class="text-center page-width page-width--narrow">
+               <div  class="theme-block">
+                  <p style="color:#31CB9E"><strong>ABOUT KNC </strong></p>
+                  <h2>Kyber Network Crystal (KNC)</h2>
+                  <img src="img/knc-graphic.655150b6.png" alt="">
+                  
+               </div>
+               <div class="theme-block">
+                  <div class="rte">
+                     <div class="enlarge-text">
+                        <p>KNC is a utility and governance token, and an integral part of Kyber Network and its flagship product KyberSwap. It is the glue that connects different stakeholders in Kyber's ecosystem</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="ProductSection-template--15627247714557__16433195531ebdb3ff" class="product-section"
+            data-section-id="template--15627247714557__16433195531ebdb3ff" data-product-id="6069820129432"
+            data-section-type="product" data-product-title="The Hand Massager™ - Smart Acupressure Massager"
+            data-product-handle="hand-massager" data-history="true" data-modal="">
+            <div class="page-content">
+               <div class="page-width">
+                  <div class="grid">
+                     <div class="grid__item medium-up--one-half product-single__sticky">
+                       <img src="img/for_trader.5b83d646.svg" alt="">
+                       <h3>HIGHER RETURNS</h3>
+                       <p><strong>Dynamic Fees</strong></p>
+                       <p>We adjust trading fees dynamically based on market conditions to give you the best returns.
+                     </p>
+                    <h3>BONUS REWARDS
+                  </h3>
+                       <p><strong>BONUS REWARDS
+                     </strong></p>
+                       <p>Deposit your tokens and farm attractive rewards. We collaborate with projects to get you the best rewards.
+                     </p>
+                        <script type="application/json" id="ModelJson-template--15627247714557__16433195531ebdb3ff">
+                                 []
+                              </script>
+                     </div>
+                     <div class="grid__item medium-up--one-half">
+                        <div class="product-single__meta">
+                           <div class="product-block product-block--header">
+                              <h1 class="h2 product-single__title"><span style="color: #31CB9E;">FOR TRADERS.</span>  Swap your tokens at the best rates. No limits
+                              </h1>
+                              <!-- Start Areviews product title Rating Code -->
+                              <div class='areviews_header_stars'></div>
+                              <!-- End Areviews product title Rating Code -->
+                           </div>
+                           <div data-product-blocks>
+                             
+                              <div class="product-block">
+                              </div>
+                              <div class="product-block">
+                                 <div class="product-block">
+                                    <form method="post" action="/cart/add"
+                                       id="AddToCartForm-template--15627247714557__16433195531ebdb3ff-6069820129432"
+                                       accept-charset="UTF-8" class="product-single__form"
+                                       enctype="multipart/form-data">
+                                       <input type="hidden" name="form_type" value="product" /><input type="hidden"
+                                          name="utf8" value="✓" />
+                                      
+                                       <div class="shopify-payment-terms product__policies"></div>
+                                       <select name="id" data-product-select class="product-single__variants no-js">
+                                          <option selected="selected" value="37353246621848">
+                                             Default Title - $99.99 USD
+                                          </option>
+                                       </select>
+                                       <textarea data-variant-json class="hide" aria-hidden="true"
+                                          aria-label="Product JSON">
+   [{"id":37353246621848,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"Electric Hand Massager","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"The Hand Massager™ - Smart Acupressure Massager","public_title":null,"options":["Default Title"],"price":9999,"weight":1361,"compare_at_price":20000,"inventory_management":null,"barcode":"","requires_selling_plan":false,"selling_plan_allocations":[]}]
+</textarea>
+                                    </form>
+                                 </div>
+                                 <div data-store-availability-holder
+                                    data-product-name="The Hand Massager™ - Smart Acupressure Massager"
+                                    data-base-url=""></div>
+                              </div>
+                              <div class="product-block">
+                                 <div class="rte">
+                                    <p>With our Dynamic Trade Routing technology, we aggregate liquidity from multiple DEXs (including KyberSwap) and identify the best trade route for you. <br></p>
+                                    <strong>Best price guaranteed</strong> 👋 <br>
+                                    <strong>Lowest possible slippage</strong> 👋 <br>
+                                    <strong>Save time & effort</strong> 👋 <br>
+                                    <div class="payment-buttons">
+                                       <button style="margin-top:20px ;" type="submit" name="add" data-add-to-cart
+                                          class="btn btn--full add-to-cart add-to-cart--secondary">
+                                          <span data-add-to-cart-text data-default-text="Add to cart">
+                                             Swap Now
+                                          </span>
+                                       </button>
+                                       <div data-shopify="payment-button" data-has-selling-plan="false"
+                                          class="shopify-payment-button"><button
+                                             class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden"
+                                             disabled="disabled" aria-hidden="true"> </button><button
+                                             class="shopify-payment-button__more-options shopify-payment-button__button--hidden"
+                                             disabled="disabled" aria-hidden="true"> </button></div>
+                                    </div>
+                                   
+                                       <meta charset="utf-8">
+                                       <img style="display: block; margin-left: auto; margin-right: auto;"
+                                          src="img/seamless.00aefb80.svg"
+                                          alt="">
+                                    </p>
+                                    <h2 style="text-align: center;"><strong data-mce-fragment="1"><span style="color: #31CB9E;">Seamless liquidity. 
+                                       For everyone</strong></h2></span>
+                                    <p>Anyone can provide liquidity to KyberSwap by depositing tokens e.g. Traders, Token Teams.</p>
+                                    <p>Anyone can access this liquidity from KyberSwap for their own use case e.g. Dapps, Aggregators.</p>
+                                    <p>Thousands of users and multiple decentralized applications are already providing and using our liquidity.
+                                    </p>
+                                    <meta charset="utf-8">
+                                      
+                                    <h2 style="text-align: center;"><strong data-mce-fragment="1"><span style="color: #31CB9E;">FOR LIQUIDITY PROVIDERS</span>
+                                    </strong></h2>
+                                    <p><strong>Earn more with your crypto assets</strong> </p>
+                                    <p>We gives liquidity providers the option of choosing between two liquidity protocols so they can earn passive income - KyberSwap Elastic and KyberSwap Classic. Simply deposit your liquidity and start earning.</p>
+                                    <meta charset="utf-8">
+                                    
+                                 <h2 style="text-align: center;"><strong data-mce-fragment="1">Amplified Liquidity Pools
+                                 </strong></h2>
+                                 <p><strong>We can amplify liquidity pools to provide much higher capital efficiency and better slippage for you. Deposit less tokens and still achieve better liquidity and volume.</strong> </p>
+                                
+                                       
+                                       
+                                       
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </main>
+      <div id="shopify-section-footer-promotions" class="shopify-section index-section--footer"></div>
+      <div id="shopify-section-footer" class="shopify-section">
+         <footer class="site-footer" data-section-id="footer" data-section-type="footer">
+            <div class="page-width">
+               <div class="grid">
+                  <style data-shopify>
+                     @media only screen and (min-width: 769px) {
+                        .footer__item--1494292481350 {
+                           width: 30%;
+                        }
+                     }
+                  </style>
+                  <div class="grid__item footer__item--1494292481350">
+                     <div class="footer__logo-social">
+                        <style data-shopify>
+                           .footer__logo a {
+                              height: 50px;
+                           }
+                        </style>
+                        <div class="footer__logo">
+                           <a href="#">
+                              <img src="img/logo.svg"
+                                 alt="TheHandMassager">
+                           </a>
+                        </div>
+                        <ul class="no-bullets footer__social">
+                           <li>
+                              <a target="_blank" rel="noopener" href="#"
+                                 title="TheHandMassager on Facebook">
+                                 <svg aria-hidden="true" focusable="false" role="presentation"
+                                    class="icon icon-facebook" viewBox="0 0 14222 14222">
+                                    <path
+                                       d="M14222 7112c0 3549.352-2600.418 6491.344-6000 7024.72V9168h1657l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4968.72C2600.418 13603.344 0 10661.352 0 7112 0 3184.703 3183.703 1 7111 1s7111 3183.703 7111 7111zm-8222 7025c362 57 733 86 1111 86-377.945 0-749.003-29.485-1111-86.28zm2222 0v-.28a7107.458 7107.458 0 0 1-167.717 24.267A7407.158 7407.158 0 0 0 8222 14137zm-167.717 23.987C7745.664 14201.89 7430.797 14223 7111 14223c319.843 0 634.675-21.479 943.283-62.013z" />
+                                 </svg>
+                                 <span class="icon__fallback-text">Facebook</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a target="_blank" rel="noopener" href="#"
+                                 title="TheHandMassager on Instagram">
+                                 <svg aria-hidden="true" focusable="false" role="presentation"
+                                    class="icon icon-instagram" viewBox="0 0 32 32">
+                                    <path fill="#444"
+                                       d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z" />
+                                    <path fill="#444"
+                                       d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z" />
+                                 </svg>
+                                 <span class="icon__fallback-text">Instagram</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a target="_blank" rel="noopener" href="#"
+                                 title="TheHandMassager on TikTok">
+                                 <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-tiktok"
+                                    viewBox="0 0 2859 3333">
+                                    <path
+                                       d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z" />
+                                 </svg>
+                                 <span class="icon__fallback-text">TikTok</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <style data-shopify>
+                     @media only screen and (min-width: 769px) {
+                        .footer__item--1494301487049 {
+                           width: 30%;
+                        }
+                     }
+                  </style>
+                  <div class="grid__item footer__item--1494301487049">
+                     <p class="footer__title small--hide">
+                        Helpful Links
+                     </p>
+                     <button type="button"
+                        class="footer__title collapsible-trigger collapsible-trigger-btn medium-up--hide"
+                        aria-controls="Footer-1494301487049">
+                        Helpful Links
+                        <span class="collapsible-trigger__icon collapsible-trigger__icon--open" role="presentation">
+                           <svg aria-hidden="true" focusable="false" role="presentation"
+                              class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16">
+                              <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"
+                                 fill-rule="evenodd" />
+                           </svg>
+                        </span>
+                     </button>
+                     <div id="Footer-1494301487049" class="collapsible-content collapsible-content--small">
+                        <div class="collapsible-content__inner">
+                           <div class="footer__collapsible">
+                              <ul class="no-bullets site-footer__linklist">
+                                 <li><a href="#">Shipping Policy</a></li>
+                                 <li><a href="#">Privacy Policy</a></li>
+                                 <li><a href="#">Terms of Service</a></li>
+                                 <li><a href="#">Refund Policy</a></li>
+                                 <li><a href="#">Payment Policy</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <style data-shopify>
+                     @media only screen and (min-width: 769px) {
+                        .footer__item--cf6b628b-ebb7-4faf-a2e2-2c763908a76f {
+                           width: 30%;
+                        }
+                     }
+                  </style>
+                  <div class="grid__item footer__item--cf6b628b-ebb7-4faf-a2e2-2c763908a76f">
+                     <p class="footer__title small--hide">24/7 Customer Support</p>
+                     <button type="button"
+                        class="footer__title collapsible-trigger collapsible-trigger-btn medium-up--hide"
+                        aria-controls="Footer-cf6b628b-ebb7-4faf-a2e2-2c763908a76f">
+                        24/7 Customer Support
+                        <span class="collapsible-trigger__icon collapsible-trigger__icon--open" role="presentation">
+                           <svg aria-hidden="true" focusable="false" role="presentation"
+                              class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16">
+                              <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"
+                                 fill-rule="evenodd" />
+                           </svg>
+                        </span>
+                     </button>
+                     <div id="Footer-cf6b628b-ebb7-4faf-a2e2-2c763908a76f"
+                        class="collapsible-content collapsible-content--small">
+                        <div class="collapsible-content__inner">
+                           <div class="footer__collapsible">
+                              <p>Have a question? Please contact us at support</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="site-footer__bottom">
+                  <div class="footer__copyright site-footer__bottom-block"><span class="footer__powered_by"><a
+                           target="_blank" rel="nofollow"
+                           href="#">
+                        </a></span>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+   </div>
+   </div>
+   <div id="shopify-section-newsletter-popup" class="shopify-section index-section--hidden"></div>
+
+   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+         <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+         </div>
+         <div class="pswp__ui pswp__ui--hidden">
+            <button class="btn btn--no-animate btn--body btn--circle pswp__button pswp__button--arrow--left"
+               title="Previous">
+               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left"
+                  viewBox="0 0 284.49 498.98">
+                  <path
+                     d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z" />
+               </svg>
+            </button>
+            <button class="btn btn--no-animate btn--body btn--circle btn--large pswp__button pswp__button--close"
+               title="Close (esc)">
+               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close"
+                  viewBox="0 0 64 64">
+                  <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" />
+               </svg>
+            </button>
+            <button class="btn btn--no-animate btn--body btn--circle pswp__button pswp__button--arrow--right"
+               title="Next">
+               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right"
+                  viewBox="0 0 284.49 498.98">
+                  <path
+                     d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z" />
+               </svg>
+            </button>
+         </div>
+      </div>
+   </div>
+   
+   <!--Gem_Page_Footer_Script-->
+   <!-- "snippets/gem-app-footer-scripts.liquid" was not rendered, the associated app was uninstalled -->
+   <!--End_Gem_Page_Footer_Script-->
+</body>
+
+</html>
